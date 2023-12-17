@@ -23,6 +23,11 @@ public class SalespersonService implements ISalespersonService {
     }
 
     @Override
+    public void update(Salesperson salesperson) {
+        salespersonRepository.save(salesperson);
+    }
+
+    @Override
     public void delete(String id) {
         salespersonRepository.deleteById(id);
     }
