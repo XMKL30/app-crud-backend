@@ -11,5 +11,6 @@ public interface ISalespersonService {
     public void update(Salesperson salesperson);
     public void delete(String id);
     public Optional<Salesperson> findById(String id);
-    List<Salesperson> findByName(String name);
+    List<Salesperson> listByName(String name);
+    List<Salesperson> listByAgentName(String agentName);
 }

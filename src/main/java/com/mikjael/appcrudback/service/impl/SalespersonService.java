@@ -39,7 +39,12 @@ public class SalespersonService implements ISalespersonService {
     }
 
     @Override
-    public List<Salesperson> findByName(String name) {
+    public List<Salesperson> listByName(String name) {
         return salespersonRepository.findByName(name);
+    }
+
+    @Override
+    public List<Salesperson> listByAgentName(String agentName) {
+        return salespersonRepository.findByAgentName(agentName);
     }
 }

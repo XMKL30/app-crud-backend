@@ -39,4 +39,14 @@ public class SalespersonController {
     public void delete(@PathVariable("id") String id) {
         salespersonService.delete(id);
     }
+
+    @GetMapping("/search/name")
+    public List<Salesperson> getByName(@RequestParam String name) {
+        return salespersonService.listByName(name);
+    }
+
+    @GetMapping("search/agent")
+    public List<Salesperson> getByAgentName(@RequestParam String agentName) {
+        return salespersonService.listByAgentName(agentName);
+    }
 }
