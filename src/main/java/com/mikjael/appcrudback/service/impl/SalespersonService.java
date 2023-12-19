@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SalespersonService implements ISalespersonService {
@@ -30,6 +31,11 @@ public class SalespersonService implements ISalespersonService {
     @Override
     public void delete(String id) {
         salespersonRepository.deleteById(id);
+    }
+
+    @Override
+    public Optional<Salesperson> findById(String id) {
+        return salespersonRepository.findById(id);
     }
 
     @Override
